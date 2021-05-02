@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class XOR_Encrypter {
     public static String encrypt(String text, int key) {
-// wir werden die Zeichen einzeln codieren
+//wir werden die Zeichen einzeln codieren
         char[] zeichen = text.toCharArray();
 // bitweise XOR-Verschlüsselung
         for (int i = 0; i < zeichen.length; i++)
