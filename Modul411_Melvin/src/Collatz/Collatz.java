@@ -5,14 +5,14 @@ import java.util.Scanner;
 
 public class Collatz {
 
-    public void Runner(){
+    public static void main(String[] args){
         int number = InputReader();
         ArrayList<Integer> numbers = CollatzAlgo(number);
         OutputHandler(numbers);
         System.out.println("Finished!");
     }
 
-    public ArrayList<Integer> CollatzAlgo(int number) {
+    public static ArrayList<Integer> CollatzAlgo(int number) {
         ArrayList<Integer> numbers = new ArrayList<>();
 
         while (number > 1){
@@ -26,13 +26,13 @@ public class Collatz {
         return numbers;
     }
 
-    private Integer InputReader(){
+    private static Integer InputReader(){
         Scanner inputScanner = new Scanner(System.in);
         System.out.println("Enter number");
         return Integer.parseInt(inputScanner.nextLine());
     }
 
-    private void OutputHandler(ArrayList<Integer> numbers){
+    private static void OutputHandler(ArrayList<Integer> numbers){
         for (int number: numbers
              ) {
             System.out.print(number  + ",");

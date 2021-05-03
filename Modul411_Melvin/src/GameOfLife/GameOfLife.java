@@ -1,69 +1,131 @@
 package GameOfLife;
 
 public class GameOfLife {
-    private static boolean[][] world;
+    final static int X = 10;
+    final static int Y = 10;
+    final static int MAXROUNDS = 5;
 
     public static void main(String[] args){
-        world = initializeWorld();
-        simulateGame(world);
-        boolean[][] wolrdCopy = new boolean[10][10];
-        System.arraycopy(world,0,wolrdCopy,0,10);
-        for (int i = 0; i < world.length; i++){
-            for (int j = 0; j < world.length; j++){
-                int neighbours = checkForNeighbours(i,j);
-                world[i][j] = isCellALife(neighbours, wolrdCopy[i][j]);
-            }
-        }
+        boolean[][] world = initializeWorld();
+        //boolean[][] world = initializeWorldRandomized();
+        System.out.println("Game of Life\nInitial world:");
         showWorld(world);
-    }
 
-    public static boolean[][] initializeWorld(){
-        boolean[][] worldi = new boolean[10][10];
-        for(int i = 0; i < worldi.length; i++) {
-            for(int j = 0; j < worldi.length; j++){
-                worldi[i][j] = false;
+        for (int round = 1; round <= MAXROUNDS; round++) {
+            System.out.println("\nGeneration " + round);
+            world = simulateGame(world);
+            showWorld(world);
+        }
+    }
+    private static boolean[][] initializeWorld() {
+        boolean[][] world = new boolean[Y][X];
+
+        for (int y = 0; y < Y; y++) {
+            for (int x = 0; x < X; x++) {
+                world[y][x] = false; //all cells are dead
             }
         }
-        return worldi;
+        // set some cells alive
+        world[3][4] = true;
+        world[3][5] = true;
+        world[3][6] = true;
+
+        return world;
+    }
+    public static boolean[][] initializeWorldRandomized(){
+        boolean[][] world = new boolean[Y][X];
+
+        for (int y = 0; y < Y; y++) {
+            for (int x = 0; x < X; x++) {
+                world[y][x] = Math.random() > 0.7;  // 30% alive
+            }
+        }
+        return world;
     }
     public static void showWorld(boolean[][] world){
-        for(int i = 0; i < world.length; i++) {
-            for(int j = 0; j < world.length; j++){
-                if(world[i][j]){
-                    System.out.print("1");
+        for (boolean[] line : world) {
+            for (boolean cell : line) {
+                if (cell) {
+                    System.out.print(" X ");
                 } else {
-                    System.out.print("0");
+                    System.out.print(" - ");
                 }
             }
             System.out.println();
         }
     }
-    public static void simulateGame(boolean[][] world){
-        world[4][4] = true;
-        world[4][5] = true;
-        world[4][6] = true;
+    public static boolean[][] simulateGame(boolean[][] world){
+        boolean[][] futureWorld = new boolean[Y][X];
 
+        for (int y = 0; y < Y; y++) {
+            for (int x = 0; x < X; x++) {
+                int neighbours = checkForNeighbours(world, x, y);
+                boolean currentCellState = world[y][x];
+                boolean newCellState = isCellALife(currentCellState, neighbours);
+
+                //if ( currentCellState != newCellState) {
+                //    System.out.println("changed at ("+x+","+y+"): " + neighbours + " " + currentCellState + " --> " + newCellState);
+                //}
+                futureWorld[y][x] = newCellState;
+            }
+        }
+        return futureWorld;
     }
-    public static int checkForNeighbours(int row, int col){
-        int count = 0;
-        for(int i = row -1; i <= row+1; ++i) {
-            for (int j = col - 1; j <= col + 1; ++j) {
-                if (j < 0 || j >= world[0].length || i < 0 || i >= world.length) { //skip world border
+    private static int checkForNeighbours(boolean[][] world, int x, int y){
+        int neighborCounter = 0;
+        int[][] neighborPositions = {
+                {1, -1},
+                {1, 0},
+                {1, 1},
+
+                {0, -1},
+                {0, 1},
+
+                {-1, -1},
+                {-1, 0},
+                {-1, 1}
+        };
+
+        int max_x_index = world[0].length-1;
+        int max_y_index = world.length-1;
+
+        for (int[] neighbor : neighborPositions) {
+            int neighborYPosition = y + neighbor[0];
+            int neighborXPosition = x + neighbor[1];
+
+            // check for world's end
+            if (neighborYPosition < 0 || neighborYPosition > max_y_index || neighborXPosition < 0 || neighborXPosition > max_x_index) {
+                // if position out of range go to the next position
+                continue;
+            }
+            if (world[neighborYPosition][neighborXPosition]) {
+                neighborCounter++;
+            }
+        }
+        return neighborCounter;
+    }
+
+    private static int countNeighbours(boolean[][] world, int x, int y) {
+        int counter = 0;
+        for (int i = x - 1; i <= x + 1; ++i) {
+            for (int j = y - 1; j <= y + 1; ++j) {
+                if (j < 0 || j >= world[0].length || i < 0 || i >= world.length) { // skip world border
                     continue;
                 }
-                if (world[i][j]){
-                    count++;
+                if (world[i][j]) {
+                    counter += 1;
                 }
             }
         }
-        if(world[row][col]){
-            count--;
+
+        if (world[x][y]) { // don't count the living cell itself
+            counter -= 1;
         }
-        return count;
+        return counter;
     }
 
-    public static boolean isCellALife(int neighbours, boolean worldCellALife){
+    private static boolean isCellALife(boolean isCellLiving, int neighbours) {
         if (neighbours == 3) return true;
-        return neighbours == 2 && worldCellALife;
+        return neighbours == 2 && isCellLiving;
     }
 }
