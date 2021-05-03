@@ -17,11 +17,14 @@ public class XOR_Encrypter {
 
     public static void main(String[] args) throws IOException {
 // Key
-        int key = Integer.parseInt(args[0]);
+//        int key = Integer.parseInt(args[0]);
+        int key = 23;
 // Dateiverzeichnispfad zur auszulesenden Datei.
-        String input = "src\\Ressourcen\\Gedicht.txt";
+//        String input = "src\\Ressourcen\\Gedicht.txt";
+        String input =  "C:\\Daten\\M411\\m411_melvin\\Modul411_Melvin\\src\\Ressourcen\\Gedicht.txt";
 // Dateiverzeichnispfad zur Erstellung der neuen verschlüsselten Datei.
-        String encrypt_file = args[1];
+//        String encrypt_file = args[1];
+        String encrypt_file = "C:\\Daten\\M411\\m411_melvin\\Modul411_Melvin\\src\\Ressourcen\\encrypted_file.txt";
 // Versuche Datei zum Auslesen zu öffnen
         try (Scanner scanner = new Scanner(new File(input), "UTF-8")) {
 // Writer für Verschlüsselte Zeile zu Speichern
