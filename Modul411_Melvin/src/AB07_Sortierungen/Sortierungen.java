@@ -4,17 +4,21 @@ import java.util.Arrays;
 
 public class Sortierungen {
     public static void main(String[] args){
-        int[] array = new int[10000];
-        for (int i = 0; i < array.length-1; i++){
-            array[i] = (int) (Math.random()*2000000);
-        }
+        int[] array = new int[] {1,2,4,5,3};
+
+//        for (int i = 0; i < array.length-1; i++){
+//            array[i] = (int) (Math.random()*10);
+//        }
 
         double start= System.currentTimeMillis();
+
 //        Arrays.sort(array);
 //        InsertionSort(array);
-        BubbleSort(array);
-//        SelectionSort(array);
+//        BubbleSort(array);
+        SelectionSort(array);
+
         double now= System.currentTimeMillis();
+
         for (int item: array
              ) {
             System.out.print(item + ",");
@@ -25,16 +29,16 @@ public class Sortierungen {
     }
 
     public static int[] InsertionSort(int[] array){
-        for (int i = 1; i < array.length; ++i) {
-            int key = array[i];
-            int j = i - 1;
-            while (j >= 0 && array[j] > key) {
-                array[j + 1] = array[j];
-                j = j - 1;
-            }
-            array[j + 1] = key;
+      for(int i = 1; i < array.length; i++){
+        int valueToSort = array[i];
+        int pos = i;
+        while (pos > 0 && array[pos - 1] > valueToSort){
+            array[pos] = array[pos -1];
+            pos--;
         }
-       return array;
+        array[pos] = valueToSort;
+      }
+      return array;
     }
 
     public static int[] BubbleSort(int[] array){
@@ -52,16 +56,16 @@ public class Sortierungen {
     }
 
     public static int[] SelectionSort(int[] array){
-        int temp, smallest;
-        for(int i = 0; i < array.length-1; i++){
-            smallest = i;
+        int temp, minIndex;
+        for(int i = 0; i < array.length; i++){
+            minIndex = i;
             for (int j = i + 1; j < array.length; j++){
-                if(array[j] < array[smallest]){
-                    smallest = j;
+                if(array[minIndex] > array[j]){
+                    minIndex = j;
                 }
             }
-            temp = array[smallest];
-            array[smallest] = array[i];
+            temp = array[minIndex];
+            array[minIndex] = array[i];
             array[i] = temp;
         }
         return array;
