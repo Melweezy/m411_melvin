@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f586ed1b-ff02-47bb-8efd-cf4c97902034" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Modul411_Melvin/src/GameOfLife/GameOfLife.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/411.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/411.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modul411_Melvin/src/AB07_Sortierungen/Sortierungen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modul411_Melvin/src/XOR_Encrypter/.gradle/6.7/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modul411_Melvin/src/XOR_Encrypter/.gradle/6.7/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modul411_Melvin/src/XOR_Encrypter/.gradle/6.7/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modul411_Melvin/src/XOR_Encrypter/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modul411_Melvin/src/XOR_Encrypter/.gradle/configuration-cache/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modul411_Melvin/src/XOR_Encrypter/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modul411_Melvin/src/XOR_Encrypter/XOR_Encrypter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modul411_Melvin/src/XOR_Encrypter/XOR_Encrypter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modul411_Melvin/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modul411_Melvin/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/411/Collatz/Collatz.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/411/Collatz/Collatz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/411/GameOfLife/GameOfLife.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/411/GameOfLife/GameOfLife.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/411/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/411/com/company/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,12 +32,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../M226A/modul226A" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Modul411_Melvin/src/AB07_Sortierungen" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.GameOfLife">
+  <component name="RunManager" selected="Application.Sortierungen (1)">
     <configuration name="GameOfLife" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GameOfLife.GameOfLife" />
       <module name="411" />
@@ -69,6 +64,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Sortierungen (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AB07_Sortierungen.Sortierungen" />
+      <module name="411" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="AB07_Sortierungen.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Sortierungen" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="411" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Modul411_Melvin/src/AB07_Sortierungen" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="XOR_Encrypter" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="XOR_Encrypter.XOR_Encrypter" />
       <module name="411" />
@@ -83,12 +99,15 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Sortierungen" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.XOR_Encrypter" />
       <item itemvalue="Application.GameOfLife" />
+      <item itemvalue="Application.Sortierungen (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Sortierungen (1)" />
         <item itemvalue="Application.GameOfLife" />
         <item itemvalue="Application.XOR_Encrypter" />
         <item itemvalue="Application.XOR_Encrypter" />
@@ -126,11 +145,6 @@
           <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
           <option name="timeStamp" value="2" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Modul411_Melvin/src/GameOfLife/GameOfLife.java</url>
-          <line>10</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

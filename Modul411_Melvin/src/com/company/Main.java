@@ -1,5 +1,6 @@
 package com.company;
 
+import AB07_Sortierungen.Sortierungen;
 import Collatz.Collatz;
 
 
