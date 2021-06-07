@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Sortierungen {
     public static void main(String[] args){
-//        int[] array = new int[] {1,2,4,5,3};
+//        int[] array = new int[] {1,2,4,5,3,6,8,9,7};
 
         int[] array = new int[10];
         for (int i = 0; i < array.length-1; i++){
@@ -17,7 +17,8 @@ public class Sortierungen {
 //        Insertion.insertionSort(array);
 //        Bubble.bubbleSort(array);
 //        Selection.selectionSort(array);
-        Merge.main(array);
+//        Merge.mergesort(array);
+        Quick.main(array);
 
         double now= System.currentTimeMillis();
 
