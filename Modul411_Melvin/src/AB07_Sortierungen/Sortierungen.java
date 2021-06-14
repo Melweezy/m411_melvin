@@ -21,13 +21,9 @@ public class Sortierungen {
         Quick.main(array);
 
         double now= System.currentTimeMillis();
-<<<<<<< HEAD
-        for (int item: array) {
-=======
 
         for (int item: array
              ) {
->>>>>>> 9f4a47ce995afa8fd5afa49d17e8b2233c92191e
             System.out.print(item + ",");
         }
 
