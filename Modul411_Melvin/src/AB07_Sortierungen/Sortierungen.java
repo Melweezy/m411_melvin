@@ -15,8 +15,7 @@ public class Sortierungen {
         BubbleSort(array);
 //        SelectionSort(array);
         double now= System.currentTimeMillis();
-        for (int item: array
-             ) {
+        for (int item: array) {
             System.out.print(item + ",");
         }
 
