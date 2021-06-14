@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f586ed1b-ff02-47bb-8efd-cf4c97902034" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/Modul411_Melvin/src/LB2_Ex/Ex1.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Modul411_Melvin/src/LB2_Ex/Ex2.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Modul411_Melvin/src/LB2_Ex/Ex3.java" afterDir="false" />
@@ -9,6 +10,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modul411_Melvin/src/AB07_Sortierungen/Sortierungen.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modul411_Melvin/src/AB07_Sortierungen/Sortierungen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/411/AB07_Sortierungen/Sortierungen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/411/AB07_Sortierungen/Sortierungen.class" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modul411_Melvin/src/AB07_Sortierungen/Quick.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modul411_Melvin/src/AB07_Sortierungen/Merge.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modul411_Melvin/src/AB07_Sortierungen/Merge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modul411_Melvin/src/AB07_Sortierungen/Sortierungen.java" beforeDir="false" afterPath="$PROJECT_DIR$/Modul411_Melvin/src/AB07_Sortierungen/Sortierungen.java" afterDir="false" />
+>>>>>>> 9f4a47ce995afa8fd5afa49d17e8b2233c92191e
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +49,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+<<<<<<< HEAD
+=======
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+>>>>>>> 9f4a47ce995afa8fd5afa49d17e8b2233c92191e
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -86,8 +98,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Sortierungen (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="AB07_Sortierungen.Sortierungen" />
+    <configuration name="Quick" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AB07_Sortierungen.Quick" />
       <module name="411" />
       <extension name="coverage">
         <pattern>
@@ -107,8 +119,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="TestEx" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="LB2_Ex.TestEx" />
+=======
+    <configuration name="Sortierungen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AB07_Sortierungen.Sortierungen" />
+      <module name="411" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="AB07_Sortierungen.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="XOR_Encrypter" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="XOR_Encrypter.XOR_Encrypter" />
+>>>>>>> 9f4a47ce995afa8fd5afa49d17e8b2233c92191e
       <module name="411" />
       <extension name="coverage">
         <pattern>
@@ -123,10 +153,14 @@
     <list>
       <item itemvalue="Application.Sortierungen" />
       <item itemvalue="Application.Sortierungen (1)" />
+<<<<<<< HEAD
       <item itemvalue="Application.Ex1" />
       <item itemvalue="Application.Ex2" />
       <item itemvalue="Application.Ex3" />
       <item itemvalue="Application.TestEx" />
+=======
+      <item itemvalue="Application.Quick" />
+>>>>>>> 9f4a47ce995afa8fd5afa49d17e8b2233c92191e
     </list>
     <recent_temporary>
       <list>
@@ -135,6 +169,13 @@
         <item itemvalue="Application.Ex3" />
         <item itemvalue="Application.Ex1" />
         <item itemvalue="Application.Sortierungen (1)" />
+<<<<<<< HEAD
+=======
+        <item itemvalue="Application.Quick" />
+        <item itemvalue="Application.GameOfLife" />
+        <item itemvalue="Application.XOR_Encrypter" />
+        <item itemvalue="Application.XOR_Encrypter" />
+>>>>>>> 9f4a47ce995afa8fd5afa49d17e8b2233c92191e
       </list>
     </recent_temporary>
   </component>
